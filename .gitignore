@@ -1,0 +1,7 @@
+# MATLAB 编辑器备份与操作系统元数据
+*.asv
+*.m~
+*.autosave
+Thumbs.db
+.DS_Store
+/results/*.mat

@@ -1,0 +1,44 @@
+STATIC KIRCHHOFF PLATE FEM ASSIGNMENT
+Clamped edges: x0; all other edges free.
+cfg.bc = x0_clamped; mesh sizes = [4 8 16 32]
+Lx = 1.000000 m; Ly = 1.000000 m; h = 0.010000 m
+E = 2.1e+11 Pa; nu = 0.300000; q = 1000.000000 N/m^2 (+w)
+Element: 4-node rectangular Adini/ACM Kirchhoff bending element.
+Per-node DOFs: [w, dw/dy, -dw/dx]. 3x3 Gauss stiffness/load.
+
+FINEST MESH
+Elements = 1024; nodes = 1089; total DOFs = 3267
+Peak absolute nodal deflection = 0.0067120596 m = 6.71205957 mm
+Peak coordinates: x = 1.000000 m, y = 0.500000 m
+Peak w/h = 0.671206
+This FEM dimensionless coefficient = 0.129078069
+Chang (1980) analytic coefficient = 0.13102 (6.81304000 mm)
+Gap from Chang (1980) = 1.482164%
+Tian, Zhong & Li (2011) analytic coefficient = 0.129
+(three significant figures); this FEM rounds to 0.129.
+The two published analytic values disagree. Do not
+interpret the gap from Chang as verified exact error.
+Chang source: Applied Mathematics and Mechanics 1(3):371-383.
+https://www.amm.shu.edu.cn/EN/abstract/abstract14282.shtml
+Tian source: Archives of Civil and Mechanical Engineering
+11(4):1043-1052, DOI:10.1016/S1644-9665(12)60094-6.
+Applied transverse force = 1000.0000000000 N
+Support transverse reaction = -999.9999996891 N
+Applied y-moment = -500.0000000000 N m
+Support y-moment = 499.9999997635 N m
+Relative force equilibrium error = 3.109e-10
+Relative moment equilibrium error = 4.729e-10
+Relative free-DOF residual = 3.428e-10
+Relative y-midline symmetry error = 2.022e-11
+
+OTHER CHECKS
+16x16 all-edges-clamped peak = 0.06630934 mm
+16x16 x=0 one-edge-clamped peak = 6.71290147 mm
+16x16 active-boundary peak = 6.71290147 mm
+16x16 doubled-load linearity relative error = 0.000e+00
+
+Interpretation: mesh-change percentages are convergence indicators,
+not exact analytical errors. The element is nonconforming.
+Peak w/h near 0.67 makes the small-deflection assumption
+questionable for physical predictions; the result is the
+specified linear Kirchhoff model prediction only.
