@@ -53,4 +53,5 @@ cfg.bc = 'x0_clamped';         % 固支边界
 - `plate_mesh.m`、`plate_basis.m`、`plate_element.m`、`plate_assemble.m`、`plate_solve.m`、`plate_clamped_edges.m`：有限元核心实现。
 - `self_check.m`：独立数值和物理校验。
 - `课堂改参速查.md`：现场改参示例。
+- `代码思路说明.md`：按计算流程解释各 MATLAB 文件及有限元核心步骤。
 - `results/`：默认算例的可复现输出。
